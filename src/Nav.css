@@ -1,0 +1,35 @@
+.nav{
+    display: flex;
+    align-items: center;
+    font-family: 'Karla';
+    font-style: normal;
+    height: 65px;
+    padding:0px 20px;
+
+    background: linear-gradient(90deg, #672280 1.18%, #A626D3 100%);
+}
+.nav img{
+    width: 32px;
+    height: 27px;
+    
+}
+.nav h1{
+    margin: 0px;
+    font-weight: 700;
+    font-size: 1.3rem;
+    line-height: 24px;
+    letter-spacing: -0.1em;
+    color: #FFFFFF;
+    margin-left: 8px;
+    margin-right: auto;
+}
+.nav h3{
+    font-family: 'Inter';
+    font-style: normal;
+    margin: 0px;
+    font-weight: 500;
+    font-size: 0.9rem;
+    line-height: 15px;
+    text-align: right;
+    color: #FFFFFF;
+}
