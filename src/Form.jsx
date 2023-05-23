@@ -8,7 +8,14 @@ export default function Form()
     bottomText:"Take my money",
     randomImage:"/images/meme.png"
 })
-    const [allMemeImages,setAllMemeImages] = React.useState(data)
+    const [allMemeImages,setAllMemeImages] = React.useState([])
+
+    React.useEffect(()=>{
+        fetch("https://api.imgflip.com/get_memes")
+        .then(res => res.json())
+        .then(data => setAllMemeImages(data.data.memes))
+    })
+
     function handleText(event){
         console.log("clicked")
         const {name,value} = event.target
@@ -22,7 +29,7 @@ export default function Form()
     }
     function updateImg(){
         const num = Math.floor(Math.random()*100)
-        const url = allMemeImages.data.memes[num].url
+        const url = allMemeImages[num].url
         setMeme(prevData => {
             return {...prevData,randomImage:url}
         })
