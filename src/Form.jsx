@@ -1,7 +1,6 @@
 import React from "react";
 import './Form.css'
 import './Meme.css'
-import data from '../memedata'
 export default function Form()
 {   const [meme,setMeme] = React.useState({
     topText:"shut up and",
@@ -14,7 +13,7 @@ export default function Form()
         fetch("https://api.imgflip.com/get_memes")
         .then(res => res.json())
         .then(data => setAllMemeImages(data.data.memes))
-    })
+    },[])
 
     function handleText(event){
         console.log("clicked")
