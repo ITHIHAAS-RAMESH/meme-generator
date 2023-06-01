@@ -36,16 +36,16 @@ export default function Form()
     
     return(
         <>
-            <div className="form--container">
+            <div className="form--container flex flex-col h-full  my-5 md:my-24 md:grid">
                 <input 
-                    className="textfield" 
+                    className="textfield text-3xl" 
                     type="text" 
                     placeholder="Top text"
                     name="topText" 
                     
                     onChange = {handleText}/>
                 <input 
-                    className="textfield" 
+                    className="textfield text-3xl" 
                     type="text" 
                     placeholder="Bottom text" 
                     name="bottomText"
@@ -53,9 +53,9 @@ export default function Form()
                     onChange = {handleText}/>
                 <button className="submit" onClick={updateImg}>Get a new meme image  🖼</button>
             </div>
-            <div className="meme">
+            <div className="meme m-auto mx-auto w-10/12 md:m-auto md:w-full">
                 <h3 className="top">{meme.topText}</h3>
-                <img src={meme.randomImage}/>
+                <img className="h-full " src={meme.randomImage}/>
                 <h3 className="bottom">{meme.bottomText}</h3>
             </div>
         </>
